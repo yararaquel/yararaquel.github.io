@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: layout
 ---
 
-<div>
-
-{{ content }}
-
-{% include list-category-posts.html lang=page.lang category=page.category %}
-
-</div>
+{% assign __ = site.data.languages[site.language] %}
+{% include category.html %}
