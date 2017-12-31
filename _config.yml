@@ -6,14 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Simple Blog Theme
-email: your-email@domain.com
+title: Blog da Yara
+email: yara.prof@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
+  Aqui posto coisas relacionadas à Licenciatura de Música, Pedagogia e afins.
+baseurl:  # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://yararaquel.github.io" # change this to the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -58,69 +56,46 @@ image: /assets/img/profile-225.png
 
 #  site:
 facebook:
-  publisher_id: 1474191545979552
-  profile_id: 1474191545979552
-  app_id: 126080721296732
-  authors: [1474191545979552]
+  publisher_id: yararaquel.montecoelho
+  profile_id: yararaquel.montecoelho
+  authors: [yararaquel.montecoelho]
   #pixelcode: 1670622619859349
 
 
 # gitlab on site
-gitlab:
-  owner_url: https://gitlab.com/lorepirri
+# gitlab:
+#   owner_url: https://gitlab.com/lorepirri
 
-# github on site
-github:
-  owner_url: https://github.com/lorepirri
+# # github on site
+# github:
+#   owner_url: https://github.com/lorepirri
 
 
 # translation
 
 t:
   en:
-    latest-posts:  "Latest Posts"
-    read-more:  "read more"
-    on-word: "on"
-    contact: "Contact"
+    latest-posts:  "Últimos Posts"
+    read-more:  "Leia mais"
+    on-word: "em"
+    contact: "Contato"
     contact-page: "contact.md"
-    read-time: "min read"
-    comments: "comments"
-    go-to-home-page: "Go to the Home Page"
+    read-time: "leitura mínima"
+    comments: "comentários"
+    go-to-home-page: "Voltar à página oficial"
     months:
       january: "Jan"
-      february: "Feb"
+      february: "Fev"
       march: "Mar"
-      april: "Apr"
-      may: "May"
+      april: "Abr"
+      may: "Mai"
       june: "Jun"
       july: "Jul"
-      august: "Aug"
-      september: "Sep"
-      october: "Oct"
-      november: "Nov"
-      december : "Dec"
-  it:
-    latest-posts:  "Ultimi Posts"
-    read-more:  "leggi"
-    on-word: "su"
-    contact: "Contatta"
-    contact-page: "contatta.md"
-    read-time: "min di lettura"
-    comments: "commenti"
-    go-to-home-page: "Vai alla Pagina Iniziale"
-    months:
-      january: "Gen"
-      february: "Feb"
-      march: "Mar"
-      april: "Apr"
-      may: "Mag"
-      june: "Giu"
-      july: "Lug"
       august: "Ago"
       september: "Set"
-      october: "Ott"
+      october: "Out"
       november: "Nov"
-      december : "Dic"
+      december : "Dez"
 
 defaults:
   -
