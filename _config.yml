@@ -1,14 +1,13 @@
 title:             Cantinho da Yara
 email:             yara.prof@gmail.com
 description:       Um Blog sobre música e pedagagogia
-author:            Yara Raquel
+author:            "Yara Raquel"
 baseurl:           ""
-url:               "http://blackrockdigital.github.io"
+url:               "http://https://yararaquel.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
-facebook_username: StartBootstrap
+github_username:   yararaquel
+facebook_username: yararaquel.montecoelho
 
 # Build settings
 markdown:          kramdown
