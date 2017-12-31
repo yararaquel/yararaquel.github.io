@@ -1,4 +1,16 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem 'jekyll', '3.1.2' # this is the Jekyll version we are working with
-# gem 'nokogiri', '1.6.7.2' # Nokogiri is a dependency that might cause errors if it's not added to the script
+source "https://rubygems.org"
+gemspec
+
+gem "jekyll", "~> 3.6.0"
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-paginate", "~> 1.1.0"
+end
+
+require 'rbconfig'
+  if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
+    gem 'rb-fsevent', '<= 0.9.4'
+  end
