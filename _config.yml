@@ -15,7 +15,8 @@ url: "https://yararaquel.github.io" # change this to the base hostname & protoco
 
 # Build settings
 markdown: kramdown
-
+kramdown:
+   auto_ids: true
 # Make sure to exclude 'vendor' from the build
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
