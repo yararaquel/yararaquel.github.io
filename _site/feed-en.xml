@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog da Yara</title>
+    <description>Aqui posto coisas relacionadas à Licenciatura de Música, Pedagogia e afins.
+</description>
+    <link>https://yararaquel.github.io/jekyll-theme-simple-blog</link>
+    <atom:link href="https://yararaquel.github.io/jekyll-theme-simple-blog/feed-en.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 31 Dec 2017 02:06:26 -0200</pubDate>
+    <lastBuildDate>Sun, 31 Dec 2017 02:06:26 -0200</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+    
+  </channel>
+</rss>
