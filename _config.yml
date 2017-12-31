@@ -10,7 +10,7 @@ title: Blog da Yara
 email: yara.prof@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Aqui posto coisas relacionadas à Licenciatura de Música, Pedagogia e afins.
-baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+baseurl:  # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://yararaquel.github.io" # change this to the base hostname & protocol for your site
 
 # Build settings
