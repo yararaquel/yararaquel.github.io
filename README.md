@@ -1,112 +1,137 @@
-# Jekyll Material Theme
+![Jekyll Version](https://img.shields.io/badge/Jekyll-3.1.2-red.svg)
+![Build Status](https://gitlab.com/jekyll-themes/default-bundler/badges/master/build.svg)
 
-A Jekyll Theme based on [Material Design](https://material.io/) using [Materialize](http://materializecss.com/).
+----
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-material-theme.svg)](https://badge.fury.io/rb/jekyll-material-theme)
+View Demo: https://lorepirri.gitlab.io/jekyll-theme-simple-blog/
 
-<a href="https://imgur.com/3PKshVo"><img src="https://i.imgur.com/3PKshVo.gif" title="source: imgur.com" /></a>
+-----
+# Simple Blog Theme
 
-<a href="https://imgur.com/hlB1MOw"><img src="https://i.imgur.com/hlB1MOw.gif" title="source: imgur.com" /></a>
+*Simple Blog is a Jekyll theme for Gitlab or GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](https://lorepirri.gitlab.io/jekyll-theme-simple-blog/), or even [use it today](#install).*
 
-<a href="https://imgur.com/D9DSyuk"><img src="https://i.imgur.com/D9DSyuk.gif" title="source: imgur.com" /></a>
+<img src="https://gitlab.com/lorepirri/jekyll-theme-simple-blog/raw/master/simple-blog-theme.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/>
 
-##### Cookie Policy
+## Features
 
-If you use cookies on your site, or choose to use Google Analytics, you're able to notify visitors with this prompt. The ```Thanks!``` dialog message can be customised in your ```_config.yml``` file.
+- Blog
+- Responsive
+- Minimal
+- Multi-language
+- SEO optimized for Facebook preview
+- Facebook plugins integration (Page, Comments, Messenger, Like)
+- Facebook Mirring Comments
+- Social buttons (facebook, instagram, linkedin, twitter, github, gitlab)
+- RSS feed multi-language
 
-<a href="https://imgur.com/O7sICnY"><img src="https://i.imgur.com/O7sICnY.gif" title="source: imgur.com" /></a>
+## Install
 
-### [Live Demo](https://jameshamann.com)
+Simple Blog Theme is 100% compatible with GitLab and GitHub Pages.
 
-## Installation
+### Install as a Fork
 
-Add this line to your Jekyll site's `Gemfile`:
+1. [Fork the repo](https://gitlab.com/lorepirri/jekyll-theme-simple-blog)
+2. Clone down the repo with one of the two:
+    * ssh `$ git clone git@gitlab.com:your-username/jekyll-theme-simple-blog.git`
+    * https: `$ git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog.git`
+3. Empty the `_posts/` folder
+4. Install bundler and gems with `$ script/bootstrap`
+5. Run Jekyll with `$ script/server`
+6. Modify `_config.yml`, `about-en.md`, `contact-en.md`, and the other pages for your project
+6. Write your posts in `_posts/en` and `_posts/<other-language>`
+7. [Customize the theme](customizing)
 
-```ruby
-gem "material-theme"
+### SEO tags
+
+Simple Blog includes simple SEO tags from [jekyll-social-metatags](https://github.com/lorepirri/jekyll-social-metatags). Have a look at the page for its usage.
+
+The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
+
+To switch to a better SEO tags however, one should install [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed):
+
+1. Add this line to your site's Gemfile:
+
+    ```ruby
+    gem 'jekyll-seo-tag'
+    ```
+
+2. And then add this line to your site's `_config.yml`:
+
+    ```yml
+    gems:
+      - jekyll-seo-tag
+    ```
+
+3. Replace with the following, the `<!-- jekyll-seo-tag -->` comment in your site's `default.html`:
+
+      ```liquid
+      {% seo %}
+      ```
+
+For more information about configuring this plugin, see the official [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) page.
+
+
+### Stylesheet
+
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
+
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+
+### Layouts
+
+If you'd like to change the theme's HTML layout:
+
+1. [Copy the original template](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
+
+### Sass variables
+
+If you'd like to change the theme's [Sass variables](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/blob/master/_sass/variables.scss), set new values before the `@import` line in your stylesheet:
+
+```scss
+$section-headings-color: #0086b3;
+
+@import "{{ site.theme }}";
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+## Roadmap
 
-```yaml
-theme: material-theme
-```
+See the [open issues](https://gitlab.com/lorepirri/jekyll-theme-simple-blog/issues) for a list of proposed features (and known issues).
 
-And then execute:
+## Project philosophy
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install material-theme
-
-## Usage
-
-The ```_config.yml``` file has the following options.
-
-```yaml
-title: Your awesome title
-name: Your Name
-email: your-email@example.com
-description: Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-
-parallax_image_one: assets/images/startup3.jpg # These are the images used for the parallax background
-parallax_image_two: assets/images/startup3.jpg
-
-project_one: "First Project"
-project_one_description: Describe your project!
-project_one_url: https://github.com/jameshamann/jekyll-material-theme
-project_one_icon: location_on # these are from materiailize css, the full collection is here: http://materializecss.com/icons.html
-
-project_two: Second Project
-project_two_description: Describe your project!
-project_two_url: https://github.com/jameshamann/jekyll-material-theme
-project_two_icon: photo_camera
-
-
-project_three: Third Project
-project_three_description: Describe your project!
-project_three_url: https://github.com/jameshamann/jekyll-material-theme
-project_three_icon: hotel
-
-
-project_four: Fourth Project
-project_four_description: Describe your project!
-project_four_url: https://github.com/jameshamann/jekyll-material-theme
-project_four_icon: restaurant
-
-
-project_button: Github
-
-github: https://github.com/jameshamann/jekyll-material-theme
-medium: https://medium.com
-
-baseurl: / # If your site is located at /blog or /home, change it here
-url: http://localhost:4000/ # The URL of your site
-
-google_analytics_tracking_id: # This looks something like UA-000000000-0 Head over to https://analytics.google.com/ to setup.
-
-cookie_accept_message: Thanks! # The pop-up dialog that appears after accepting the cookie notice.
-
-
-# Build settings
-markdown: kramdown
-permalink: pretty
-plugins:
-  - jekyll-feed
-  - jekyll-assets
-  - jekyll-minifier
-
-```
+The Simple Blog Theme is intended to make it quick and easy for Gitlab or GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jameshamann/jekyll-material-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Interested in contributing to Simple Blog? We'd love your help. Simple Blog is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](CONTRIBUTING.md) for instructions on how to contribute.
 
-## Development
+### Previewing the theme locally
 
-To set up your environment to develop and further customise this theme, fork the repo and explore the ```_assets``` directory, which includes all the ```css, js``` and ```font``` folders.
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-## License
+1. Clone down the theme's repository (`git clone https://gitlab.com/lorepirri/jekyll-theme-simple-blog`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `script/server` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+[`.gitlab-ci.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitlab-ci.yml
+[`Gemfile`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/Gemfile
+[`.gitignore`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitignore
+[`_config.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml
+
+[Bundler]: http://bundler.io/
+[Jekyll]: http://jekyllrb.com/
+[jek-312]: https://rubygems.org/gems/jekyll/versions/3.1.2
